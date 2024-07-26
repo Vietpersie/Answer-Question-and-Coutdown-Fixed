@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    background-color: #ffffff;
+}
+
+#container {
+/*     background: rgb(110, 6, 174);
+    background: linear-gradient(0deg, rgb(114, 15, 176) 0%, rgba(149,14,215,1) 100%); */
+/*     background-image: url("https://img.freepik.com/free-photo/ultra-detailed-nebula-abstract-wallpaper-4_1562-749.jpg"); */
+    position: relative;
+    top: 0px;
+    width: 800px;
+    height: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 3px solid #27053c;
+}
+#timer{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 30px;
+}
+#score {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  font-size: 30px;
+}
+
+#Quest-container {
+    position: absolute;
+    top: 140px;
+    left: 40px;
+    right: 40px;
+    background-color: coral;
+    width: 720px;
+    height: 200px;  
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+.answer-btn {
+   position:relative;
+   display: inline-block;
+   background-color: #ffffff;
+   width: 720px;
+   height: 80px;
+   border-radius: 20px;
+   font-size: 30px;
+   left: 40px;
+   top: 360px;
+   border: 2px solid white;
+/*    background-color: #00ff00; */
+
+}
+
+
+#AnsA, #AnsB, #AnsC, #AnsD {
+/*     position: relative; */
+    display: inline-block;
+    width: 320px;
+    height: 80px;
+    border-radius: 20px;   
+    text-align: left;
+    text-align-last: center;
+    background-color: darksalmon;
+    margin: 15px; 
+    cursor: pointer;
+}
+
+
+ button {
+    font-family: "Londrina Solid Light", sans-serif;          
+    font-size: 14px;
+    background-color: salmon;    
+    color: #ffffff;        
+    border: none;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;   
+    margin: 10px;
+    cursor: pointer;
+} 
+
+button: hover {
+    cursor: pointer;
+    background-color: #ffda91;
+}
+#button {    
+    font-family: "Londrina Solid Light", sans-serif;          
+    font-size: 30px;
+    background-color: #FFC85E;    
+    color: #ffffff;        
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 20px auto 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;        
+}
+#button: hover {
+    cursor: pointer;
+    background-color: #ffda91;
+}
+h2 {
+/*   margin-top: : 5px; */
+  font-size: 30px;
+}
+
+.ListQuest{
+    position: absolute;
+    top: 575px;
+    left: 40px;
+    right: 40px;
+    display: none;
+    width: 30px;
+    height: 60px;
+    font-size: 10px;
+    margin: 10px;
+
+}
