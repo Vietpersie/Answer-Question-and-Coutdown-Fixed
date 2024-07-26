@@ -1,0 +1,90 @@
+const quizData = [
+  ["Q1", 'Ai là người đầu tiên đặt chân lên mặt trăng?', 'Neil Armstrong', 'Buzz Aldrin', 'Yuri Gagarin', 'Alan Shepard', 'AnsA'],
+  ["Q2", 'Tính: 2+3=?', '4', '5', '6', '7', 'AnsB']
+];
+
+let score = 0;
+let scoreText = document.getElementById("score");
+let AnsA = document.getElementById("AnsA");
+let AnsB = document.getElementById("AnsB");
+let AnsC = document.getElementById("AnsC");
+let AnsD = document.getElementById("AnsD");
+let QuestText = document.getElementById("Quest-text");
+let ListQuest = document.getElementById("ListQuest");
+const answers = document.querySelectorAll('.answer-btn');
+// const button = document.getElementById("your-button-id"); // Thay your-button-id bằng ID thích hợp cho nút của bạn
+ListQuest.style.display = "none";
+let currentQuestion = 0;
+
+function Play() {
+  button.style.display = "none";
+  alert("Welcome to my trivia game! Are you ready?");
+  
+  loadQuiz();
+}
+
+function loadQuiz() {
+  const currentQuizData = quizData[currentQuestion];
+  QuestText.innerHTML = currentQuizData[1];
+  AnsA.innerHTML = currentQuizData[2];
+  AnsB.innerHTML = currentQuizData[3];
+  AnsC.innerHTML = currentQuizData[4];
+  AnsD.innerHTML = currentQuizData[5];
+
+  answers.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        const answerId = e.target.id;
+          checkAnswer(answerId);
+    });
+  });
+}
+
+function checkAnswer(answers) {
+  const currentQuizData = quizData[currentQuestion];
+  const correctAnswer = currentQuizData[6]; // Lấy đáp án đúng từ mảng
+//   console.log("answer",answers);
+//   console.log(correctAnswer);
+
+  if (answers == correctAnswer) {
+    alert("Exactly!");
+    score++;
+    scoreText.innerHTML = "Score: " + score;
+  } else {
+    alert("Wrong!");
+  }
+
+  currentQuestion++;
+
+  if (currentQuestion < quizData.length) {
+    setTimeout(loadQuiz, 1500);
+  } else {
+    alert("    You win");
+  }
+}
+
+
+
+
+
+// RESPONSIVE SCREEN
+let container = document.querySelector("#container");
+
+window.onload = window.onresize = resizeGame;
+
+function resizeGame() {
+    let gameRatio = container.offsetWidth / container.offsetHeight;
+    let windowRatio = window.innerWidth / window.innerHeight;
+    
+    container.style.position = "absolute";
+    container.style.left = `${(window.innerWidth - container.offsetWidth) / 2}px`;
+    container.style.top = `${(window.innerHeight - container.offsetHeight) / 2}px`;
+
+    let newScale;
+    if (gameRatio > windowRatio) {
+        newScale = window.innerWidth / container.offsetWidth;
+    }
+    else {
+        newScale = window.innerHeight / container.offsetHeight;
+    }
+    container.style.transform = `scale(${newScale})`;
+}
