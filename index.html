@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div id="container">
+    <h1 id="timer">Time: 5s</h1>
+    <h1 id="score">Score: 0</h1>
+    <div id="Quest-container">
+        <h2 id="Quest-text">Test your knowledge about our planet!</h2> 
+		<button onclick="Play()" id="button">Play</button> 
+    </div>
+    
+<!--     <div id="answers">
+      <button class="answer-btn">Đáp án 1</button>
+      <button class="answer-btn">Đáp án 2</button>
+      <button class="answer-btn">Đáp án 3</button>
+      <button class="answer-btn">Đáp án 4</button>
+    </div> -->
+    <div class="answer-btn">
+      <button id="AnsA">Đáp án 1</button>
+      <button id="AnsB">Đáp án 2</button>
+      <button id="AnsC">Đáp án 3</button>
+      <button id="AnsD">Đáp án 4</button>
+    </div>
+    
+    <div class="ListQuest" id="ListQuest">
+        <button onclick="Quest1()" >Q1</button>
+        <button onclick="Quest2()" >Q2</button>
+        <button onclick="Quest3()" >Q3</button>
+        <button onclick="Quest4()" >Q4</button>
+    </div>    
+</div>
+
+    
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
